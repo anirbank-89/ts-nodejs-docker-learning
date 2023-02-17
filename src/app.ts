@@ -1,16 +1,16 @@
-import express, { Request, Response } from "express";
-import dotenv from "dotenv";
+import express, { Request, Response } from 'express';
+import dotenv from 'dotenv';
 dotenv.config();
-import config from "config";
-import responseTime from "response-time";
-import connect from "./utils/connect";
-import logger from "./utils/logger";
-import routes from "./routes";
-import deserializeUser from "./middleware/deserializeUser";
-import { restResponseTimeHistogram, startMetricsServer } from "./utils/metrics";
-import swaggerDocs from "./utils/swagger";
+import config from 'config';
+import responseTime from 'response-time';
+import connect from './utils/connect';
+import logger from './utils/logger';
+import routes from './routes';
+import deserializeUser from './middleware/deserializeUser';
+import { restResponseTimeHistogram, startMetricsServer } from './utils/metrics';
+import swaggerDocs from './utils/swagger';
 
-const port = config.get<number>("port");
+const port = config.get<number>('port');
 
 const app = express();
 

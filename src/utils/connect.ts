@@ -10,10 +10,11 @@ async function connect() {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     } as ConnectOptions);
-    logger.info('DB connected');
+    console.log('DB connected');
+    // logger.info('DB connected');
   } catch (error: any) {
-    // logger.error('Could not connect to db due to ', error);
     console.error('Could not connect to db due to ', error);
+    // logger.error('Could not connect to db due to ', error);
     process.exit(1);
   }
 }
